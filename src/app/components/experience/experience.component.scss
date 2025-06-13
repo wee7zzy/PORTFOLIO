@@ -1,0 +1,163 @@
+.experience {
+  padding: 6rem 0 3rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #007bff;
+    }
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .timeline-section {
+    h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+
+  .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 3rem;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        left: 29px;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: linear-gradient(to bottom, #007bff 0%, #00a6ff 100%);
+      }
+
+      .timeline-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #007bff, #00a6ff);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        
+        i {
+          font-size: 1.5rem;
+          color: white;
+        }
+      }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #007bff;
+    }
+
+    .timeline-date {
+      min-width: 150px;
+      padding-right: 2rem;
+      color: #007bff;
+      font-weight: 600;
+    }
+
+    .timeline-content {
+      flex: 1;
+
+      h4 {
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .role {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          color: #666;
+          margin-bottom: 0.5rem;
+          padding-left: 1.5rem;
+          position: relative;
+
+          &:before {
+            content: '•';
+            color: #007bff;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 5rem 0 2rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .timeline-section {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .timeline-item {
+      flex-direction: column;
+
+      .timeline-date {
+        margin-bottom: 1rem;
+        padding-right: 0;
+      }
+    }
+  }
+}
